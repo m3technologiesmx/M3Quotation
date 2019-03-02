@@ -1,4 +1,5 @@
-﻿using System;
+﻿using M3Quotation.CustomAuthentication;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace M3Quotation.Controllers
 {
     public class HomeController : Controller
     {
+        [CustomAuthorize(Roles="User")]
         public ActionResult Index()
         {
             return View();
